@@ -190,6 +190,7 @@ def player_stats(player)
       index = hash[team][:players].index(player_data)
       if hash[team][:players][index][:player_name] == player 
         return player_data
+      end 
     }
   }
 end 
