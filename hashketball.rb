@@ -183,6 +183,20 @@ def team_names
   names
 end 
 
+def player_numbers(team_name)
+  hash = game_hash
+  numbers = []
+  hash.each{|team, data|
+    if hash[team][:team_name] == team_name
+      hash[team][:players].each{|player_data|
+        index = hash[team][:players].index(player_data)
+        numbers << hash[team][:players][index][:number]
+      }
+    end 
+  }
+  numbers 
+end 
+
 def player_stats(player)
   hash = game_hash
   hash.each{|team, data|
