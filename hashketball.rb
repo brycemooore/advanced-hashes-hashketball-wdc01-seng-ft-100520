@@ -182,3 +182,13 @@ def team_names
   }
   names
 end 
+
+def player_stats(player)
+  hash = game_hash
+  hash.each{|team, data|
+    hash[team][:players].each{|player_data|
+      index = hash[team][:players].index(player_data)
+      if hash[team][:players][index][:player_name] == player 
+        return player_data
+    }
+  }
