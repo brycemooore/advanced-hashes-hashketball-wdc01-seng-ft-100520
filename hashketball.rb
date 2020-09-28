@@ -222,5 +222,6 @@ def big_shoe_rebounds
     }
   }
   rebounds 
-  binding.pry 
 end 
+
+p big_shoe_rebounds
