@@ -208,3 +208,9 @@ def player_stats(player)
     }
   }
 end 
+
+def find_big_shoe
+  hash = game hash 
+  hash.each{|team, data|
+    
+  }
