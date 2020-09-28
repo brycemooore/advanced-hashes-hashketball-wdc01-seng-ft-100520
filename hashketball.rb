@@ -209,8 +209,17 @@ def player_stats(player)
   }
 end 
 
-def find_big_shoe
+def big_shoe_rebounds
   hash = game hash 
+  max = 0
   hash.each{|team, data|
-    
+    hash[team][:players].each{|player_data|
+      index = hash[team][:players].index(player_data)
+      if hash[team][:players][index][:shoe] > max
+        max = hash[team][:players][index][:shoe]
+        rebounds = hash[team][:players][index][:rebounds]
+      end 
+    }
   }
+  rebounds 
+end 
