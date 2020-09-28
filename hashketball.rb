@@ -215,10 +215,10 @@ def big_shoe_rebounds
   hash.each{|team, data|
     hash[team][:players].each{|player_data|
       index = hash[team][:players].index(player_data)
+      binding.pry 
       if hash[team][:players][index][:shoe] > max
         max = hash[team][:players][index][:shoe]
         rebounds = hash[team][:players][index][:rebounds]
-        binding.pry 
       end 
     }
   }
