@@ -212,6 +212,7 @@ end
 def big_shoe_rebounds
   hash = game_hash 
   max = 0
+  rebounds = 0
   hash.each{|team, data|
     hash[team][:players].each{|player_data|
       index = hash[team][:players].index(player_data)
