@@ -218,6 +218,7 @@ def big_shoe_rebounds
       if hash[team][:players][index][:shoe] > max
         max = hash[team][:players][index][:shoe]
         rebounds = hash[team][:players][index][:rebounds]
+        binding.pry 
       end 
     }
   }
